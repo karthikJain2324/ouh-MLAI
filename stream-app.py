@@ -6,10 +6,10 @@ loaded_model_pkl = pkl.load(open( "model_rossmann.pkl",'rb'))
 
 
 
-def predict_note_authentication(a, b, c, d, e, f, g, h, i, j, k, l, m):
+def predict_note_authentication(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s):
 
 
-    prediction = loaded_model_pkl.predict([[a, b, c, d, e, f, g, h, i, j, k, l, m]])
+    prediction = loaded_model_pkl.predict([[a, b, c, d, e, f, g, h, i, j, k, l, m,n,o,p,q,r,s]])
     print(prediction)
     return prediction
 
@@ -40,6 +40,12 @@ def main():
     k = st.number_input("k",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
     l = st.number_input("l",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
     m = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    n = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    o = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    p = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    q = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    r = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
+    s = st.number_input("m",min_value=0.,max_value=1.0,step=1e-6,format="%.5f")
     result = ""
     if st.button("Predict"):
         result = predict_note_authentication(a, b, c, d, e, f, g, h, i, j, k, l, m)
